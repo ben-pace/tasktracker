@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import TagFilter from './TagFilter'
 import TaskForm from './TaskForm'
 import CompletionHistory from './CompletionHistory'
+import DailyChecklist from './DailyChecklist'
 
 interface Task {
   id: string;
@@ -132,6 +133,7 @@ export default function TaskList() {
 
   return (
     <>
+      <DailyChecklist />
       <CompletionHistory tasks={tasks} />
       <div className="my-12">
         <TaskForm onTaskAdded={fetchTasks} />
